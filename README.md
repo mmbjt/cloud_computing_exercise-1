@@ -23,4 +23,28 @@ Arlradio Fmsimphony
 Míra Masár
 Samy Kartit
 
-================================================================================================
+==========================================ccexercise_2======================================================
+openstack1
+1. ~/.ssh$ ssh -i id_rsa cloud@134.169.47.28
+2. cd /opt/cc-services/ccexercise/bin
+3. java -cp ./:jaxr-api.jar:ja-impl-mwcc.jar mw/path/MWPathPubishSrv
+4. MWPathPubishSrv.java -->ip= 192.168.0.4:12345
+5. MWCacheClient.java -->ip = 192.168.0.4:12346
+openstack2
+1. ~/.ssh$ ssh -i id_rsa cloud@134.169.47.28
+2. cd /opt/cc-services/ccexercise/bin
+3. java -cp ./:jaxr-api.jar:jarx-impl-mwcc.jar mw/cache/MWCache
+4. MWCache.java -->ip = 192.168.0.4:12346
+sftp
+1. sftp cloud@134.169.47.28
+2. lcd ./workspace/
+3. cd /opt/cc-services/
+4. put -r ./ccexercise ./
+
+local computer
+1. cd  ./workspace/ccexercise/
+2. wsimport -p mw.pathclient -d bin -s src -keep http://134.169.47.28:12345/MWPathSrv?wsdl
+3. MWClient.java ip-->134.169.47.28:12345
+
+
+
